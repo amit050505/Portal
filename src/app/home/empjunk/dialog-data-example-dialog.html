@@ -1,0 +1,77 @@
+<div class="profileDetailModal">
+  <div class="row">
+    <div class="col-md-8 col-sm-8 col-8">
+      <h3 mat-dialog-title>
+        <h3>{{data.name.first}} {{data.name.last}}</h3>
+        <h6 style="color:#0077B5">{{data.email}}</h6>
+        <h6 style="color:green">{{data.department}}</h6>
+      </h3>
+    </div>
+    <div  class="col-md-4 col-sm-4 col-4">
+      <img src="./assets/{{data.thumbnail}}" style="border-radius: 2px; float:right;"/>
+    </div>
+  </div>
+    <hr/>
+    <div mat-dialog-content>    
+      
+        
+      
+      <div *ngFor="let phone of data.phones">
+        {{phone.type}}: {{phone.number}}
+      </div>
+
+      <hr/>
+      
+      <div class="row">
+          <div class="col-md-12">
+            <span style="font-weight: bold">
+              Official details
+            </span> 
+          </div>
+      </div>    
+
+      <div>
+          <span *ngFor="let role of data.roles" style="font-style: italic; color:#0077B5;">
+            {{role}} |
+          </span> 
+      </div>
+
+        <div>          
+            Date of joining: {{data.hiredOn | date}}              
+        </div>
+        
+        <div>          
+            terminated On: {{data.terminatedOn}}              
+        </div>
+      
+        <hr/>
+      
+        <div class="row">
+            <div class="col-md-12">
+              <span style="font-weight: bold">
+                Personal details
+              </span> 
+            </div>
+        </div>  
+
+        <div>          
+            Gender: {{data.gender}}              
+        </div>
+        <div>          
+            Date of birth: {{data.dob | date}}              
+        </div>
+        <div>          
+            <i>Address:</i>
+              {{data.address.street}}, {{data.address.city}}, {{data.address.state}}, {{data.address.zip}}  
+        </div>
+
+    </div>
+
+    <br/><br/>
+    <mat-dialog-actions style="float:right">
+      
+      <button mat-flat-button mat-dialog-close style="float:right; background-color:#0077B5; outline:none; color:white;">close</button>
+    
+    </mat-dialog-actions>
+
+</div>

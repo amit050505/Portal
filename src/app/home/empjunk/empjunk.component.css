@@ -1,0 +1,72 @@
+.empItem
+{
+    cursor: pointer;
+    background-color: #0077B5;
+    margin: 0px auto 10px auto;
+    padding: 10px 0px;
+}
+.imgThumbnail{
+    background-color: white;
+    padding: 1px;
+
+}
+
+.empDetails{
+    align-content: left;
+}
+
+.empName{
+    color:white;
+    font-weight: bold;
+}
+.empDepartment
+{
+    color: white;
+}
+
+@media only screen and (max-width: 576px) and (min-width: 425px) {
+    .EmployeePortalBody
+    {
+        width:80%;
+        margin:0px auto;
+    }
+}
+.LSec
+{
+    padding: 10px;
+}
+.RSec
+{
+    height:100%;
+    /* background-color: pink; */
+    padding: 10px;
+    font-family: Lucida sans;
+}
+.deatailedView
+{
+    
+    height:550px;
+    padding: 10px;
+    border-right: solid 1px #0077B5;;
+    border-top: solid 1px #0077B5;;
+    /* border-radius: 2px; */    
+}
+.SelectedEmpImg
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 2px;
+}
+
+#mddialog
+{
+    position:absolute;
+    top:0px;
+}
+
+.profileDetailModal
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width:525px;
+}

@@ -1,0 +1,5 @@
+<div>
+  <mat-toolbar>Events attended by {{Name}} so far</mat-toolbar>
+  <hr/>
+  <app-bae-finances *ngFor="let ea of EventsAttended" [event]="ea" (elementToRemove)="removeElement($event)"></app-bae-finances>
+</div>

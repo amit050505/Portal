@@ -1,0 +1,24 @@
+<div class="row EmployeePortalBody">
+  <div class="col-md-12 LSec">
+      
+    <div *ngFor="let emp of employeeList" class="col-md-6 col-sm-6 col-xs-12" (click)="openDialog(emp.username);">
+          <div class="empItem row">
+            <div  class="col-sm-6 col-4">
+                <img src="./assets/{{emp.thumbnail}}"  class="imgThumbnail" />
+            </div>
+
+            <div class="col-sm-6 col-8" >
+                <div class="empDetails">
+                    <div  class="empName">
+                        {{emp.name.first}} {{emp.name.last}}
+                    </div>
+                    <div class="empDepartment">
+                        {{emp.department}}
+                    </div>            
+                </div>    
+            </div>
+      </div>
+    </div>
+  </div>
+
+</div>

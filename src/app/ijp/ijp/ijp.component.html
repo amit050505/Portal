@@ -1,0 +1,27 @@
+<mat-card style="margin-bottom:20px; align-content: center; color:3f3844; 
+                font-family:Lucida sans; background-color: antiquewhite">
+                
+        <span style="float:left">Current postings</span>
+        <span style="float:right">
+            <button mat-flat-button (click)="applyHere()">Apply here</button>
+        </span>
+</mat-card>
+<div>
+    <div *ngFor="let job of jobOpenings">
+        <mat-card style="margin: 10px 0px;">
+                        <mat-card-title style="color:maroon; font-family:Lucida sans">
+                            {{job.role}}                       
+                            <p style="color:grey; font-size: 14px;">Job ID: {{job.jobId}}</p>                        
+                        </mat-card-title>
+                <mat-card-content>                    
+                    <div style="font-weight:normal">
+                        <div>Skills: {{job.skills}}</div>
+                        <div>Experince required: {{job.experience}}</div>                    
+                        <div>Location: {{job.location}}</div>
+                        <div>Status: {{job.status}}</div>
+                        <div>Date posted: {{job.datePosted}}</div>                                                                    
+                    </div>
+                </mat-card-content>            
+        </mat-card>
+    </div>
+</div>

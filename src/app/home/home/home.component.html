@@ -1,0 +1,55 @@
+<mat-toolbar>Cheap Stanley</mat-toolbar>
+<mat-card style="margin-top: 10px;">                                   
+                FormArray tracks the value and validity state of a numerically indexed array of AbstractControl instances.
+</mat-card>
+
+<mat-card style="margin-top: 10px; background-color: rgb(234, 241, 245); color:black;">          
+    <h3><i>FormControl in a FormGroup</i></h3>
+    <form [formGroup]="homeForm">
+        <div class="form-group">
+            <label class="center-block">Name:
+             <input class="form-control" formControlName="name">
+            </label>
+        </div>
+        
+
+        <div class="form-group">
+                <label class="center-block">Street:
+                  <input class="form-control" formControlName="street">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="center-block">City:
+                  <input class="form-control" formControlName="city">
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="center-block">State:
+                  <select class="form-control" formControlName="state">
+                      <option *ngFor="let state of states" [value]="state">{{state}}</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="center-block">Zip Code:
+                  <input class="form-control" formControlName="zip">
+                </label>
+              </div>
+              <div class="form-group radio">
+                <h4>Super power:</h4>
+                <label class="center-block"><input type="radio" formControlName="power" value="flight">Flight</label>
+                <label class="center-block"><input type="radio" formControlName="power" value="x-ray vision">X-ray vision</label>
+                <label class="center-block"><input type="radio" formControlName="power" value="strength">Strength</label>
+              </div>
+              <div class="checkbox">
+                <label class="center-block">
+                  <input type="checkbox" formControlName="sidekick">I have a sidekick.
+                </label>
+              </div>
+
+    </form>
+    <p>Form value: {{ homeForm.value | json }}</p>
+    <p>Form value: {{ homeForm.status | json }}</p>
+    <p>pristine value: {{ homeForm.pristine | json }}</p>
+    <p>untouched value: {{ homeForm.untouched | json }}</p>
+</mat-card>

@@ -1,0 +1,25 @@
+<div class="main">
+
+    <ul>
+        <li ><a id="NavHome" routerLink="/home"  routerLinkActive="active">Home</a></li>
+        <li ><a id="NavCareer" routerLink="/career" routerLinkActive="active">Favorites</a></li>
+        <li ><a id="NavIJP" routerLink="/ijp" routerLinkActive="active">Careers</a></li> 
+        <li ><a id="NavAboutUs" routerLink="/aboutus" routerLinkActive="active">About Us</a></li> 
+           
+    </ul>
+
+    <div>
+        <p appChangetext>Does this work??</p>  
+        <hr/>          
+    </div>
+
+    <app-ad-banner></app-ad-banner>
+
+    <!-- <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+        <router-outlet  #o="outlet"></router-outlet>
+    </div> -->
+
+    <router-outlet></router-outlet>
+    
+</div>
+
