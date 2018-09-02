@@ -10,6 +10,7 @@ export var Profile ={
         ' Angular',
         ' RxJs', 
         ' Angular Material',
+        ' Kendo UI',
         ' Service Workers', 
         ' sw-precache', 
         ' SSR',
